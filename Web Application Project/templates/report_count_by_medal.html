@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+    <title>Medal Count Results</title>
+</head>
+<div nav class="navbar navbar-light bg-dark"></div>
+<div nav class="navbar navbar-light bg-light"></div>
+    <h5>Number of Gold, Silver and Bronze Medals Result</h5>
+   <br>
+   
+<body>
+    <table class="table table-hover">
+      <style>
+        </style>
+      <thead>
+      <tr>
+      <th>{{dbcols[1]}}</th><th>{{dbcols[2]}}</th><th>{{dbcols[4]}}</th><th>{{dbcols[5]}}</th><th>{{dbcols[6]}}</th>
+    </tr>
+  </thead>
+      {# this is a comment the line below prints the db result #}
+      <tbody>
+      {% for result in dbresult %}
+      <tr>
+        <td>{{result[1]}}</td><td>{{result[2]}}</td><td>{{result[4]}}</td><td>{{result[5]}}</td><td>{{result[6]}}</td>
+      </tr>  
+      {% endfor %}
+    </tbody>
+    </table>
+  </body>
+  <div nav class="navbar navbar-light bg-dark">
+    <form class="form-inline"> 
+        <button class="btn btn-outline-success" type="button"><a href="{{ url_for('admin') }}" class="navbar-item">Admin Home Page</a></button>
+  </div>
+  <br>
+<div nav class="navbar navbar-light bg-dark"></div>
+<footer>
+  <address>
+    <p><h6> Lincoln Olympic Committee</h6></p>
+    <hr>
+    <p><h6>Address: 123, Athlete Lane, Lincoln, Christchurch 7676</h6><h6>Email: athletesadmin.org.nz</h6><h6>Phone: 03 111 1111</p>
+
+   </address>
+</footer>
+<div nav class="navbar navbar-light bg-dark"></div>
+<hr>
+</body>
+</html>
+
+ 

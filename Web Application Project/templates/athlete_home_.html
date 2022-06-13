@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Athlete Homepage</title>
+</head>
+<body><div nav class="navbar navbar-light bg-dark"></div>
+  <br>
+    <h4>Athlete Login Page</h4>
+    <br>
+    <div nav class="navbar navbar-light bg-light"></div>
+    <p> 
+    <br>
+    <h5>Select your name from the dropdown</h5>
+    </p>
+    {# this is a comment the line below prints the db result #}
+    <form action="/athlete/events" method="GET" >
+        <select name="memberid" id="memberid"> 
+
+        {% for result in dbresult %}
+        <option value = "{{result[0]}}">{{result[1]}} {{result[2]}}</option>
+    {% endfor %}
+</select>
+    <input type="submit"/>
+</form>
+</form>
+<br>
+</div>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div nav class="navbar navbar-light bg-dark"></div>
+<footer>
+  <address>
+    <p><h6> Lincoln Olympic Committee</h6></p>
+    <hr>
+    <p><h6>Address: 123, Athlete Lane, Lincoln, Christchurch 7676</h6><h6>Email: athletesadmin.org.nz</h6><h6>Phone: 03 111 1111</p>
+
+   </address>
+</footer>
+<div nav class="navbar navbar-light bg-dark"></div>
+<hr>
+</body>
+</html>

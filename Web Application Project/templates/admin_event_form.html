@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <title>Event form</title>
+</head>
+<body><div nav class="navbar navbar-light bg-dark"></div>
+<body>
+
+      <h5>Add new event </h5>
+      <br>
+       <H6> Required values are marked by asterisk (*) </H6>
+
+      
+    <form action="/admin/addevent" method="POST">
+        
+        <label for="eventid">Event ID*:</label>
+        <input type="int" id="eventid" name="eventid" placeholder = "Event ID" required ="required" maxlength="3" min="2" /> <br/>
+        
+        <label for="eventname">Event Name*:</label>
+        <input type="text" id="eventname" name="eventname" required ="required"/> <br/>
+       
+        <label for="sport">Sport:</label>
+        <input type="text" id="sport" name="sport" required ="required"/> <br/>
+       
+        <label for="nzteam">NZ Team:</label>
+        <input type="int" id="nzteam" name="nzteam" required ="required" maxlength="3" /> <br/>
+        <br>
+        <input type="submit"/>
+        <br>
+        <br>
+        <input type="reset"/>
+      </div>
+    </form>
+    <br>
+    <H6> [*Please note that eventid is primary and your require to enter a greater and non-duplicate value as manual option provided instead of auto generated key due to a four digit.] </H6>
+</body>
+</html>
+<hr>
+<div nav class="navbar navbar-light bg-dark">
+  <form class="form-inline"> 
+      <button class="btn btn-outline-success" type="button"><a href="{{ url_for('admin') }}" class="navbar-item">Admin Home page</a></button>
+</div><br>
+<br>
+<br>
+<div nav class="navbar navbar-light bg-dark"></div>
+<footer>
+<address>
+<p><h6> Lincoln Olympic Committee</h6></p>
+<hr>
+<p><h6>Address: 123, Athlete Lane, Lincoln, Christchurch 7676</h6><h6>Email: athletesadmin.org.nz</h6><h6>Phone: 03 111 1111</p>
+
+</address>
+</footer>
+<div nav class="navbar navbar-light bg-dark"></div>
+<hr>
+
+<style>
+  fieldset{
+      background-color: #a8a2a2;
+      border: none;
+      border-radius: 2px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      padding: 0 .625em;
+  }
+
+  label{
+      cursor: pointer;
+      display: inline-block;
+      padding: 3px 6px;
+      text-align: left;
+      width: 150px;
+      vertical-align: top;
+  }
+
+  input{
+      font-size: inherit;
+  }
+</style>
+</body>
+</html>
+
+</body>
+</html>

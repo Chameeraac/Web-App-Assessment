@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <title>Non Qualifying Events Result</title>
+</head>
+<body><div nav class="navbar navbar-light bg-dark"></div>
+  <br>
+    <h4>Non-qualifying selection</h4>
+    <br>
+    <div nav class="navbar navbar-light bg-light"></div>
+    <p> 
+    <br>
+    <h5>Select a name from the dropdown to add marks and change the position</h5>
+    </p>
+    {# this is a comment the line below prints the db result #}
+    <form action="/admin/nonqualify/addscores" method="GET, POST" >
+      <select name="resultid" id="resultid">
+
+    {% for result in dbresult %}
+      <option value = "{{result[3]}}">{{result[1]}} {{result[2]}}</option>
+     {% endfor %}
+  </select>
+  <input type="submit"/>
+</form>  
+  
+  </body>
+  </html>
+  <br>
+  <div nav class="navbar navbar-light bg-dark">
+    <form class="form-inline"> 
+        <button class="btn btn-outline-success" type="button"><a href="{{ url_for('admin') }}" class="navbar-item">Admin Page</a></button>
+  </div>
+  <hr>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div nav class="navbar navbar-light bg-dark"></div>
+  <footer>
+    <address>
+      <p><h6> Lincoln Olympic Committee</h6></p>
+      <hr>
+      <p><h6>Address: 123, Athlete Lane, Lincoln, Christchurch 7676</h6><h6>Email: athletesadmin.org.nz</h6><h6>Phone: 03 111 1111</p>
+  
+     </address>
+  </footer>
+  <div nav class="navbar navbar-light bg-dark"></div>
+  <hr>
+  </body>
+  </html>
+  

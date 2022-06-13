@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Admin Homepage</title>
+</head>
+<body>
+    <div nav class="navbar navbar-light bg-dark"></div>
+    <h4>Admin Home Page</h4>
+    <div nav class="navbar navbar-light bg-dark"></div>
+    <p> 
+    <h6>Select an athlete name to update from the dropdown</h6>
+    </p>
+    {# this is a comment the line below prints the db result #}
+    <form action="admin/userupdate" method="GET" >
+        <select name="memberid" id="memberid">
+
+    {% for result in dbresult %}
+        <option value = "{{result[0]}}">{{result[2]}} {{result[3]}}</option>
+    {% endfor %}
+</select>
+    <input type="submit"/>
+</form>
+<br>
+<h6>Otherwise click here to add a new users, events and eventstages</h6>
+<div nav class="navbar navbar-light bg-dark">
+    <form class="form-inline"> 
+        <button class="btn btn-outline-success" type="button"><a href="{{ url_for('updateadminform') }}" class="navbar-item">Add a new athelete</a></button>
+        <button class="btn btn-outline-success" type="button"><a href="{{ url_for('eventform') }}" class="navbar-item">Add a new event</a></button>
+        <button class="btn btn-outline-success" type="button"><a href="{{ url_for('eventstageform') }}" class="navbar-item">Add a new event stage</a></button>
+        <button class="btn btn-outline-success" type="button"><a href="{{ url_for('nonqualify') }}" class="navbar-item">Select non qualifed list</a></button>
+  </div>
+<hr>
+<h4>
+<h6>Number of Gold, Silver and Bronze Medals and who has won them.</h6>
+<div nav class="navbar navbar-light bg-dark">
+    <form class="form-inline"> 
+        <button class="btn btn-outline-success" type="button"><a href="{{ url_for('numberbymedal') }}" class="navbar-item">Number of medals won</a></button>
+    </div>
+    <br>
+<hr>
+<h6>Teams listed by first name name</h6>
+<div nav class="navbar navbar-light bg-dark">
+    <form class="form-inline"> 
+        <button class="btn btn-outline-success" type="button"><a href="{{ url_for('listMemberByTeam') }}" class="navbar-item">By First name</a></button>
+  </div>
+<br>
+<hr>
+<h6>Number of Gold, Silver and Bronze Medals and who has won them.</h6>
+<div nav class="navbar navbar-light bg-dark">
+    <form class="form-inline"> 
+        <button class="btn btn-outline-success" type="button"><a href="{{ url_for('reportselection') }}" class="navbar-item">User Medals report</a></button>
+    </div>
+<br>
+<hr>
+<h6>Report on total medal count for stagename, eventname and medals.</h6>
+<div nav class="navbar navbar-light bg-dark">
+    <form class="form-inline"> 
+        <button class="btn btn-outline-success" type="button"><a href="{{ url_for('countbyesrs') }}" class="navbar-item">Event Medals report</a></button>
+    </div>
+    <br>
+<br>
+<hr>
+<div nav class="navbar navbar-light bg-dark">
+    <form class="form-inline"> 
+        <button class="btn btn-outline-success" type="button"><a href="{{ url_for('home') }}" class="navbar-item">Athlete login</a></button>
+    </div>
+    <br>
+<footer>
+  <address>
+    <p><h6> Lincoln Olympic Committee</h6></p>
+    <hr>
+    <p><h6>Address: 123, Athlete Lane, Lincoln, Christchurch 7676</h6><h6>Email: athletesadmin.org.nz</h6><h6>Phone: 03 111 1111</p>
+
+   </address>
+</footer>
+<div nav class="navbar navbar-light bg-dark"></div>
+<br>
+</body>
+</html>
